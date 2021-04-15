@@ -94,6 +94,7 @@ async function main() {
 	await deleteAll({ textNode: typewriterText })
 	await typewriter({ textNode: typewriterText, text: 'You make me happy.' })
 	await blinkingCursor({ cursor: cursorElem, times: 5 })
+	
 
 	await waitForClick()
 	await deleteAll({ textNode: typewriterText })
@@ -101,10 +102,20 @@ async function main() {
 	await addSlowly({ textNode: typewriterText, originalText: 'Now, that you know all of this, I want to', text: '...' })
 	await blinkingCursor({ cursor: cursorElem, times: 5 })
 	await deleteAll({ textNode: typewriterText })
+	
 	await typewriter({ textNode: typewriterText, text: 'Wish you a HAPPY BIRTHDAY!' })
 	await blinkingCursor({ cursor: cursorElem, times: 5 })
 
-	document.getElementById('miluvandme').style.opacity = 1
+	const miluvAndMe = document.createElement('img')
+	miluvAndMe.id = 'miluvandme'
+	miluvAndMe.src = 'miluvandme.jpeg'
+	miluvAndMe.style.opacity = 0
+	miluvAndMe.style.transition = 'all 5s ease-in'
+	document.body.appendChild(miluvAndMe)
+
+	await pause({ time: 1000 })
+
+	miluvAndMe.style.opacity = 1
 }
 
 
