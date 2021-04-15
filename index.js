@@ -64,7 +64,6 @@ typewriterElem.appendChild(typewriterText)
 const cursorElem = document.getElementById('cursor')
 
 async function main() {
-	/*
 	await typewriter({ textNode: typewriterText, text: '5 reasons why I love you.' })
 	await blinkingCursor({ cursor: cursorElem, text: '5 reasons why I love you.', times: 5 })
 	await deleteBack({ textNode: typewriterText, text: '5 reasons why I love you.', times: 5 })
@@ -104,7 +103,6 @@ async function main() {
 	await blinkingCursor({ cursor: cursorElem, times: 5 })
 	await deleteAll({ textNode: typewriterText })
 	
-	*/
 	await typewriter({ textNode: typewriterText, text: 'Wish you a HAPPY BIRTHDAY!' })
 	await blinkingCursor({ cursor: cursorElem, times: 5 })
 
